@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OTAKOYI</title>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="wrapper">
+      <div id="anchor" class="logotype">
+        <a href="#">
+          <img src="img/baracuda.png" alt="logotype">
+        </a>
+      </div>
+      <nav class="nav">
+        <div class="top_menu">
+          <a href="#"><i class="fa fa-search"></i></a>
+          <div class="phone">+38 063 154 35 56</div>
+          <a href="#"><i class="fa fa-angle-down"></i></a>
+
+          <div class="my_cabinet">
+            <img src="img/human.png" alt="user">
+            <span>Мій кабінет</span>
+          </div>
+          <div class="lang">
+            <a href="#"><img src="img/planet.png" alt="planet"></a>
+            <span class="lang__currentLang">UA</span>
+            <a href="#"><i class="fa fa-angle-down"></i></a>
+          </div>
+        </div>
+        <div id="mainMenu">
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="main_page">
+      <div class="about_product">
+        <h1 class="about_product__product_name">AJAX STREETSIREN</h1>
+        <p class="about_product__productCharacteristics">Працює на відстані до 2000 метрів від Ajax Hub на <br>
+          відкритому просторі або на декількох поверхах <br>
+          бізнес-центру</p>
+        <button class="about_product__btn">
+          ДЕТАЛЬНІШЕ
+          <img src="img/right-arrow.png" alt="arrow_right">
+        </button>
+      </div>
+      <img src="img/Ajax.png" alt="ajax">
+      <img src="img/bookmarks.png" alt="bookmarks">
+    </div>
+  </div>
+</main>
+
+<section>
+  <div class="container">
+    <div class="goods">
+      <div class="show_goods">
+        <h2 class="show_goods__goods">ТОВАРИ</h2>
+        <a class="show_goods__show_all" href="#">показати усі</a>
+      </div>
+      <div class="goods_list">
+        <div class="biostation">
+          <div class="biostation-wrap l2">
+            <!--<img src="img/suprema-biostation.png" alt="suprema station">-->
+            <div class="biostation-wrap__action">АКЦІЯ</div>
+            <div class="biostation-wrap__detail">
+              <div class="biostation-wrap__detail-card">В КОШИК</div>
+              <div class="biostation-wrap__detail-info">ДЕТАЛЬНІШЕ</div>
+            </div>
+            <div class="biostation-wrap__price">
+              <div class="biostation-wrap__price-old_price"><s>5399 грн</s></div>
+              <div class="biostation-wrap__price-new_price">4299 грн</div>
+            </div>
+          </div>
+          <h3 class="biostation__name">Suprema Biostation L2</h3>
+          <p class="biostation__description">BioStation A2 нашпигований найкращим <br> у світі процесором на 4 ядра, що
+            <br>
+            забеспечує найкращий у світі </p>
+        </div>
+        <div class="biostation bio_entry">
+          <div class="biostation-wrap">
+            <img src="img/suprema-bio-entry.png" alt="bio entry">
+          </div>
+          <h3 class="biostation__name">Suprema BioEntry Plus</h3>
+          <p class="biostation__description">BioStation A2 нашпигований найкращим <br> у світі процесором на 4 ядра, що
+            <br>
+            забеспечує найкращий у світі </p>
+        </div>
+        <div class="biostation fecestation">
+          <div class="biostation-wrap">
+            <img src="img/suprema-facestation.png" alt="suprema fecestation">
+          </div>
+          <h3 class="biostation__name">Suprema Facestation 2</h3>
+          <p class="biostation__description">BioStation A2 нашпигований найкращим <br> у світі процесором на 4 ядра, що
+            <br>
+            забеспечує найкращий у світі </p>
+        </div>
+        <div class="biostation xpass">
+          <div class="biostation-wrap">
+            <img src="img/suprema-xpass.png" alt="suprema xpass">
+          </div>
+          <h3 class="biostation__name">Suprema Xpass S2</h3>
+          <p class="biostation__description">BioStation A2 нашпигований найкращим <br> у світі процесором на 4 ядра, що
+            <br>
+            забеспечує найкращий у світі </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="form_registration">
+      <form method="post" class="form" action="mailto:grynik25.03@gmail.com" enctype="text/plain">
+        <h3 class="form__form_name">Форма реєстрації</h3>
+        <div class="form__form_data">
+          <input type="text" id="name" name="name" placeholder="Ім'я" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <input type="text" name="phone" placeholder="Телефон" required>
+          <input type="text" name="organization" placeholder="Організація">
+          <input type="text" id="activity" name="activity" placeholder="Вид діяльності">
+          <input type="text" id="date" name="date" placeholder="Дата" required>
+          <input type="text" name="msg" placeholder="Повідомлення">
+        </div>
+        <input type="submit" class="form__btn" value="Надіслати">
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="footer">
+      <div class="footer__rights">&#169; 2017 Barracuda. All rights reserved</div>
+      <div class="footer__company">Зроблено силами
+        <span class="footer__company-name">Otakoyi</span>
+        <img src="./img/power-by-logo.png" alt="power-by-logo">
+      </div>
+    </div>
+    <div class="anchor">
+      <a href="#anchor">
+        <img src="./img/arrow-up.png" alt="arrow-up">
+      </a>
+    </div>
+  </div>
+</footer>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

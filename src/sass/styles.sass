@@ -1,0 +1,351 @@
+@import "variables"
+@import "fonts"
+@import "mixins"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  outline: none
+  font-family: Arial
+
+a
+  text-decoration: none
+
+body
+  font: normal 14px/18px 'SegoeReg', sans-serif
+  background: #fff url("../img/liness.png") no-repeat
+  background-size: contain
+
+.container
+  max-width: 1140px
+  margin: 0 auto
+  position: relative
+
+//START HEADER
+
+.wrapper
+  display: flex
+  justify-content: space-between
+
+  .nav
+    width: 725px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+.logotype
+  margin-top: 14px
+
+.top_menu
+  display: flex
+  margin-top: 18px
+  color: $top_menu
+  cursor: pointer
+
+  .fa-search
+    color: $shopping_cart
+  .fa-angle-down
+    color: $top_menu
+
+  .phone
+    @include top_menu
+    margin: 0 5px 0 24px
+    border-bottom: 1px dashed $top_menu
+    padding-bottom: 3px
+
+  .my_cabinet
+    display: flex
+    margin: 0 30px
+
+    img
+      margin-right: 11px
+
+  .lang
+    display: flex
+
+    &__currentLang
+      margin: 0 7px 0 9px
+
+#mainMenu
+  width: 100%
+
+  .list
+    display: flex
+    justify-content: space-between
+    margin-top: 36px
+    align-items: center
+
+    li
+      font: 14px "DINProMedium"
+      cursor: pointer
+
+    li:after
+      content: "\f107"
+      font-family: FontAwesome
+      font-style: normal
+      font-weight: normal
+      padding-left: 6px
+      cursor: pointer
+
+  .cart
+    width: 95px
+    height: 36px
+    background-color: #f6f6f6
+    margin-left: 3px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+
+    .quantity
+      color: $top_menu
+
+      &:before
+        content: "\f07a"
+        font-family: FontAwesome
+        font-style: normal
+        font-weight: normal
+        cursor: pointer
+        color: $shopping_cart
+        padding-right: 9px
+
+// END HEADER
+
+//START MAIN
+
+.main_page
+  margin-top: 120px
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+  .about_product
+    display: flex
+    flex-direction: column
+    position: relative
+    top: -49px
+
+    &__product_name
+      font: 36px "DINProBold"
+      color: #f6303e
+      margin-bottom: 40px
+      margin-right: 82px
+
+    &__productCharacteristics
+      font: 14px 'SegoeSemilight'
+      color: $top_menu
+      line-height: 1.8
+      margin-bottom: 60px
+
+    &__btn
+      @include linear-gradient(to right, #1b1b1b, #453f3f)
+      width: 180px
+      height: 60px
+      border: none
+      text-transform: uppercase
+      color: #fff
+      font: 14px 'DINProMedium'
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+
+      img[alt="arrow_right"]
+        padding-left: 9px
+
+// END MAIN
+
+// START SECTION
+.goods
+  margin-top: 180px
+
+  .show_goods
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__goods
+      font: 30px "DINProBold"
+      color: #202945
+      text-transform: uppercase
+      margin-bottom: 20px
+
+    &__show_all
+      color: $shopping_cart
+      font: 14px "ProximaNovaLight"
+      display: flex
+      align-items: center
+
+    &__show_all:after
+      content: "\f105"
+      font-family: FontAwesome
+      font-style: normal
+      font-weight: normal
+      color: $shopping_cart
+      padding-left: 13px
+
+  .goods_list
+    margin-top: 52px
+    display: flex
+    justify-content: space-between
+
+    .bio_entry
+      background: url("../img/sale.png") no-repeat 95%
+      background-position-y: 0
+
+    .biostation
+      text-align: center
+      cursor: pointer
+
+      .l2
+        background: url("../img/suprema-biostation.png") no-repeat center center
+
+      &-wrap
+        width: 100%
+        height: 315px
+        position: relative
+
+        &__action
+          display: none
+          color: $shopping_cart
+          width: 38px
+          height: 18px
+          border: 1px solid $shopping_cart
+          font: 10px "SegoeSemilight"
+          position: absolute
+          right: 15px
+          top: 15px
+
+        &__detail
+          display: flex
+          flex-direction: column
+          justify-content: center
+
+
+          &-card
+            margin: auto
+            margin-top: 80px
+            width: 160px
+            height: 48px
+            color: #ffffff
+            border: none
+            background-color: $shopping_cart
+            display: flex
+            justify-content: center
+            align-items: center
+
+
+      &:hover .biostation-wrap
+        background-color: #373737
+        opacity: .9
+        transition: .5s
+
+      h3
+        color: $biostation_list_name
+        margin-bottom: 16px
+        text-align: left
+
+      h3:hover
+        color: $shopping_cart
+        cursor: pointer
+
+      p
+        color: $biostation_description
+        text-align: left
+
+      &__name
+        font: 16px "DINProBold"
+        margin-top: 44px
+
+      &__description
+        font: 14px "SegoeSemilight"
+        line-height: 1.8
+
+// END SECTION
+
+
+//START SECTION FORM
+
+.form_registration
+  margin-top: 124px
+  text-align: center
+
+  .form
+    max-width: 950px
+    margin: 0 auto
+    @include linear-gradient(to right, #f1f1f1, #e6e6e6)
+
+    &__btn
+      margin: 60px 0
+      width: 150px
+      height: 48px
+      background-color: $shopping_cart
+      text-transform: uppercase
+      border: none
+      color: #ffffff
+      font: 14px "SegoeReg"
+
+    &__form_name
+      font: 30px "DINProBold"
+      color: #202945
+      padding: 60px 0 50px 0
+
+    &__form_data
+      max-width: 720px
+      margin: 0 auto
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+      input
+        width: 350px
+        height: 40px
+        padding: 0 16px 0 18px
+        margin-bottom: 26px
+        border: 1px solid #b0bec1
+
+      input:last-child
+        flex-basis: 730px
+
+      #activity
+        background:  #fff url("../img/arrow-down.png") no-repeat 97% center
+      #date
+        background: #fff url("../img/date-icon.png") no-repeat 97% center
+
+
+//END SECTION FORM
+
+// START FOOTER
+.footer
+  display: flex
+  justify-content: space-between
+  margin: 183px 0 28px 0
+  font: 14px "SegoeSemilight"
+
+  &__rights
+    color: $shopping_cart
+
+  &__company
+    color: #3f5b69
+
+    &-name
+      font: 14px "SegoeBold"
+      text-transform: uppercase
+      margin-right: 21px
+
+.anchor
+  position: absolute
+  right: 0
+  bottom: 177px
+  display: flex
+  justify-content: center
+  color: $shopping_cart
+  align-items: center
+  width: 48px
+  height: 48px
+  box-shadow: 0px 12px 21px 0 rgb( 155, 169, 179 )
+
+// END FOOTER
+

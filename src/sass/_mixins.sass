@@ -1,0 +1,10 @@
+@import "variables"
+
+@mixin top_menu
+  color: $top_menu
+  text-transform: uppercase
+
+
+@mixin linear-gradient($direction, $color-stops...)
+  background: nth(nth($color-stops, 1), 1)
+  background: linear-gradient($direction, $color-stops)
